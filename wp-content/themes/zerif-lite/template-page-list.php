@@ -62,7 +62,7 @@ get_header(); ?>
                                         <p>
                                             <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
 
-                                            <img class="aligncenter size-large" src="<?php echo wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'large' )[0]; ?>" alt="<?php the_title_attribute(); ?>" width="640" height="350" />
+                                            <img class="aligncenter size-large" src="<?php $image_url = wp_get_attachment_image_src(get_post_thumbnail_id(), 'large', true); echo $image_url[0]; ?>" alt="<?php the_title_attribute(); ?>" width="640" height="350" />
                                             </a>
                                         </p>
                                     <?php endif; ?>
